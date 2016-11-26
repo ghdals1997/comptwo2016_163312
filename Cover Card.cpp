@@ -64,84 +64,88 @@ int main(){
 	Pin *q;
 	q = pinArray;
 	
+	cout << endl;
+	cout << endl;
 	cout << "          ";
+	
 	for(int i = 0;i<4;i++){
 		switch (p->getShape()) {
-		case 1:
-			cout << "¢¼";
-			break;
-		case 2:
-			cout << "¡ß";
-			break;
-		case 3:
-			cout << "¢À";
-			break;
-		case 4:
-			cout << "¢¾";
-			break;
+			case 1:
+				cout << " ¢¼ ";
+				break;
+			case 2:
+				cout << " ¡ß ";
+				break;
+			case 3:
+				cout << " ¢À ";
+				break;
+			case 4:
+				cout << " ¢¾ ";
+				break;
+		}
+		cout << q->getNumber();
+		cout <<"     ";
+		p++;
+		q++;
 	}
-	cout << q->getNumber() << endl;
-	cout <<"     ";
-	p++;
-	q++;
-	}
-	cout << "     " << endl << "          ";
+	cout << endl << endl << "     " << endl << "          ";
 	
 	for(int i = 0;i<3;i++){
 		cout << "     ";
 		switch (p->getShape()) {
-		case 1:
-			cout << "¢¼";
-			break;
-		case 2:
-			cout << "¡ß";
-			break;
-		case 3:
-			cout << "¢À";
-			break;
-		case 4:
-			cout << "¢¾";
-			break;
+			case 1:
+				cout << " ¢¼ ";
+				break;
+			case 2:
+				cout << " ¡ß ";
+				break;
+			case 3:
+				cout << " ¢À ";
+				break;
+			case 4:
+				cout << " ¢¾ ";
+				break;
+		}
+		cout << q->getNumber();
+		p++;
+		q++;
 	}
-	cout << q->getNumber() << endl;
-	p++;
-	q++;
-	}
-	cout << "               " << endl << "                    ";
+	cout << endl << endl << "               " << endl << "                    ";
 	
 	for(int i = 0;i<2;i++){
 		switch (p->getShape()) {
-		case 1:
-			cout << "¢¼";
-			break;
-		case 2:
-			cout << "¡ß";
-			break;
-		case 3:
-			cout << "¢À";
-			break;
-		case 4:
-			cout << "¢¾";
-			break;
+			case 1:
+				cout << " ¢¼ ";
+				break;
+			case 2:
+				cout << " ¡ß ";
+				break;
+			case 3:
+				cout << " ¢À ";
+				break;
+			case 4:
+				cout << " ¢¾ ";
+				break;
+		}
+		cout << q->getNumber();
+		cout << "     ";
+		p++;
+		q++;
 	}
-	cout << q->getNumber() << endl;
-	cout << "     ";
-	p++;
-	q++;
-	}
-	cout << "               " << endl << "                        ";
+	cout << endl << endl << "               " << endl << "                        ";
+	
 	switch (p->getShape()) {
 		case 1:
-			cout << "¢¼";
+			cout << " ¢¼ ";
 			break;
 		case 2:
-			cout << "¡ß";
+			cout << " ¡ß ";
 			break;
 		case 3:
-			cout << "¢À";
+			cout << " ¢À ";
 			break;
 		case 4:
-			cout << "¢¾";
+			cout << " ¢¾ ";
 			break;
 	}
 	cout << q->getNumber() << endl;
