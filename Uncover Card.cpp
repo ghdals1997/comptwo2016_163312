@@ -1,4 +1,3 @@
-
 #include <cstdlib>
 #include <iostream>
 #include <unistd.h>
@@ -50,6 +49,11 @@ void coverCard(){
 	cout << endl;
 }
 
+void uncoverCard(){
+	system("cls");
+	
+	
+}
 
 int main(){
 
