@@ -19,26 +19,23 @@ void setcolor(int color, int bgcolor)
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (bgcolor << 4) | color);
 }
 
-void printnum(){
-	
-	vector<int>name;
-	name.reserve(8);
-		for(int i=0; i<10; i++){
-			name[i] = rand() % 4+1;
-		
-			setcolor(10 ,0);
-		
-		cout << name[i] << endl;
-	}
-}
-
 int main()
 {
 
-	printnum();
+	vector<int>v;
+	v.reserve(8);
+	
+	for(int i=0; i<10; i++){
+		v[i] = rand() % 4+1;
+		
+		setcolor(10 ,0);
+		
+		cout << v[i] << endl;
+	}
 
 	setcolor(15,0);
-	
-	cout << "done" << endl;
 
+//	setcolor(10,0);                //10 :초록
+//	cout<<" 초록색 "<<endl<<endl;
+        return 0;
 }

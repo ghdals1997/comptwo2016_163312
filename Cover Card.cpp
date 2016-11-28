@@ -50,7 +50,6 @@ void coverCard(){
 	cout << endl;
 }
 
-
 int main(){
 
 	Pin pinArray[10];
