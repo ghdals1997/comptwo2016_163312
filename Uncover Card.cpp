@@ -19,6 +19,8 @@ public:
 
 	int getShape();		//모양을 정하는 함수. 
 	int getNumber();	//숫자를 정하는 함수. 
+	
+	void printNum();
 };
 
 int Pin::getShape() {
@@ -49,14 +51,7 @@ void coverCard(){
 	cout << endl;
 }
 
-void uncoverCard(){
-	system("cls");
-	
-	
-}
-
-int main(){
-
+void printNum(){
 	Pin pinArray[10];
 	
 	for(int i=0; i <10; i++) {
@@ -156,6 +151,26 @@ int main(){
 	cout << q->getNumber() << endl;
 	
 	
+}
 
+void uncoverCard(){
+	system("cls");
+	
+	
+}
+
+int main(){
+
+	int x;
+
+	printNum();
+	cout << "5초후 카드가 뒤집힙니다. " << endl;
 	coverCard();
+	cout << "1을 입력하면 카드가 다시 공개 됩니다." << endl;
+	cin >> x;
+	if (x == 1){
+		system("cls");
+		printNum();		
+	}
+	
 }
