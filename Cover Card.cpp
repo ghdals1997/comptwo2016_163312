@@ -30,6 +30,12 @@ int Pin:: getNumber() {
 	return rand() % 10+1;
 }
 
+class Screen{
+	void coverCard();
+	void printCard();
+};
+
+
 void coverCard(){
 	
 	sleep(5);
@@ -50,9 +56,7 @@ void coverCard(){
 	cout << endl;
 }
 
-
-int main(){
-
+void printCard(){
 	Pin pinArray[10];
 	
 	for(int i=0; i <10; i++) {
@@ -150,7 +154,12 @@ int main(){
 			break;
 	}
 	cout << q->getNumber() << endl;
+}
+int main(){
+
 	
+	printCard();
+	cout << "5초후 카드가 뒤칩힙니다." << endl; 
 	
 
 	coverCard();

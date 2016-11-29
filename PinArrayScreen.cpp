@@ -2,11 +2,12 @@
 
 using namespace std;
 
-class Screan {
+class Screen {
+	void screen();
 	
 };
 
-int main(){
+void screen (){
 	cout << endl;
 	cout << endl;
 	cout << "         Pin10     Pin09     Pin08     Pin07         " << endl;
@@ -21,4 +22,10 @@ int main(){
 	cout << "                        Pin01                        " << endl;
 	cout << endl;
 	cout << endl;
+}
+
+
+
+int main(){
+	screen();
 }

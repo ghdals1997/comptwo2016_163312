@@ -31,6 +31,11 @@ int Pin:: getNumber() {
 	return rand() % 10+1;
 }
 
+class screen{
+	void coverCard();
+	void printCard();
+};
+
 void coverCard(){
 	
 	sleep(5);
@@ -51,7 +56,7 @@ void coverCard(){
 	cout << endl;
 }
 
-void printNum(){
+void printCard(){
 	Pin pinArray[10];
 	
 	for(int i=0; i <10; i++) {
@@ -163,14 +168,14 @@ int main(){
 
 	int x;
 
-	printNum();
+	printCard();
 	cout << "5초후 카드가 뒤집힙니다. " << endl;
 	coverCard();
 	cout << "1을 입력하면 카드가 다시 공개 됩니다." << endl;
 	cin >> x;
 	if (x == 1){
 		system("cls");
-		printNum();		
+		printCard();		
 	}
 	
 }
