@@ -7,7 +7,7 @@ public:
 	int score;
 	int answer;
 	double getScore();
-	
+	int judgement();
 };
 
 double Player::getScore(){
@@ -23,6 +23,10 @@ double Player::getScore(){
 			return score+4;	
 	}
 		
+}
+
+int judgement(){
+	
 }
 int main(){
 	
