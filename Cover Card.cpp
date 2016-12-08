@@ -39,7 +39,7 @@ class Screen{
 void coverCard(){
 	
 	sleep(5);
-	system("cls");
+//	system("cls");
 	cout << endl;
 	cout << endl;
 	cout << "         Pin07     Pin08     Pin09     Pin10         " << endl;
