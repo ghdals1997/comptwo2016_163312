@@ -24,12 +24,12 @@ class Card{
 
   Card::Card() {
 	cardNum = 1;					//카드의 생성자 
-	cout << "  카드생성" << endl; 	//카드 생성확인. 
+//	cout << "  카드생성" << endl; 	//카드 생성확인. 
 }
 
   Card::Card(int n){
 	cardNum = n;													//카드 생성 
-	cout << "카드숫자 : " << cardNum << "  카드생성" << endl; 
+//	cout << "카드숫자 : " << cardNum << "  카드생성" << endl; 
 }
 
   int Card::getCardNum(){			//카드의 번호를 1~10까지 랜덤으로 리턴함. 
@@ -214,7 +214,7 @@ class Player{
   
 // 점수를 계산하고 출력하기 위한  클래스  
   
-class ScoreBoard(){
+class ScoreBoard{
 	private:
 		int	score;
 	
@@ -224,7 +224,7 @@ class ScoreBoard(){
 		
 		int calScore();				//정답에 대한 점수를 계산 하는 함수. 
 		int calScardscore();		//회득한 특수카드에 대한 점수를 계산하는 함수. 
-}
+};
 
   ScoreBoard::ScoreBoard(){
   	 score = 1; 
@@ -244,6 +244,7 @@ class Screen{
 		void gameEnd();			//게임을 종료 
 		void printCard(int  x, int y);		//카드를 출력하기 위한 함수 
 		void setcolor(int color, int bgcolor); 		//색을 바꾸기 위한 함수 
+		void fiveSecLater();
 };
 
 void setcolor(int color, int bgcolor) {
@@ -415,9 +416,55 @@ void setcolor(int color, int bgcolor) {
 		
 		printCard(tmpNum, tmpShape);
 	}
+	
+	cout << "5초후 카드가 뒤집힙니다." << endl;
+	sleep(5);
 }
 
+	void fiveSecLater(){
+	int shape;
+	int num;	
+	
+  	system("cls");
+  		cout << endl << endl;
 
+/*	cout << endl;
+	cout << "         Pin10     Pin09     Pin08     Pin07         " << endl;
+	cout << endl;
+	cout << endl;
+	cout << "              Pin06     Pin05     Pin04              " << endl;
+	cout << endl;
+	cout << endl;
+	cout << "                   Pin03     Pin02                   " << endl;
+	cout << endl;
+	cout << endl;
+	cout << "                        Pin01                        " << endl;
+	cout << endl;
+	cout << endl;
+*/		cout << endl;
+				cout << endl;
+				cout << "         Pin10     Pin09     Pin08     Pin07         " << endl;
+				cout << endl;
+				cout << endl;
+				cout << "              Pin06     Pin05     "; 
+				setcolor(12 ,0);
+				cout << "Pin04              " << endl; 
+				setcolor(15 ,0);
+				cout << endl;
+				cout << endl;
+				cout << "                   Pin03     Pin02                   " << endl;
+				cout << endl;
+				cout << endl;
+				cout << "                        Pin01                        " << endl;
+				cout << endl;
+				cout << endl;
+	cout << "빨간색으로 가리키는 볼링핀의 카드를 맞추세요." << endl << endl;
+	cout << "먼저 모양을 입력하세요.(해당 모양의 숫자를 입력하세요)" << endl;
+	cout << "1)♠, 2)◆, 3)♠, 4)♥" << endl;
+	cin >> shape;
+	cout << "1~10까지 중 숫자를 입력하세요" << endl;
+	cin >> num;
+	}
 
 
 int main(){
@@ -446,11 +493,14 @@ int main(){
 			  }
 		
 		if(decision == 1){					//위에서 dicision의 값에 의해  
-			playGround();					//back으로 돌아갈지 아니면 playGround함수를 출력할지 결정함.
+			playGround();
+			fiveSecLater();					//back으로 돌아갈지 아니면 playGround함수를 출력할지 결정함.
 		}else{
 			goto back;						//back으로 돌아감. 
 		}
-	
+			
+		
+			goto back;
 //	cin >> decison;
 	
 	
